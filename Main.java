@@ -9,11 +9,19 @@ public class Main
 		termostato.liga();
 		
 		for(int i = 0; i < 3; i++){
-		    termostato.aumentaTemperatura();
+		    if(termostato.getEstado()){
+		        termostato.aumentaTemperatura();
+		    }else{
+		        System.out.println("Termostato desligado");
+		    }
 		}
 		
 		for(int i = 0; i < 5; i++){
-		    termostato.diminuiTemperatura();
+		    if(termostato.getEstado()){
+		        termostato.diminuiTemperatura();
+		    }else{
+		        System.out.println("Termostato desligado");
+		    }
 		}
 		
 		System.out.println("Temperatura: " + termostato.mostraTemperatura());
@@ -21,7 +29,11 @@ public class Main
 		//---------------------------------------
 		
 		for(int i = 0; i < 2; i++){
-		    termostato.aumentaTemperatura();
+		    if(termostato.getEstado()){
+		        termostato.aumentaTemperatura();
+		    }else{
+		        System.out.println("Termostato desligado");
+		    }
 		}
 		
 		System.out.println("Temperatura: " + termostato.mostraTemperatura());
@@ -31,11 +43,19 @@ public class Main
 		termostato.liga();
 		
 		for(int i = 0; i < 8; i++){
-		    termostato.aumentaTemperatura();
+		    if(termostato.getEstado()){
+		        termostato.aumentaTemperatura();
+		    }else{
+		        System.out.println("Termostato desligado");
+		    }
 		}
 		
 		for(int i = 0; i < 2; i++){
-		    termostato.diminuiTemperatura();
+		    if(termostato.getEstado()){
+		        termostato.diminuiTemperatura();
+		    }else{
+		        System.out.println("Termostato desligado");
+		    }
 		}
 		
 		termostato.desliga();
