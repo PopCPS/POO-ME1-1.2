@@ -20,21 +20,15 @@ public class Termostato
         estado = false;
     }
     
-    public boolean aumentaTemperatura(){
-        if(estado == true){
+    public void aumentaTemperatura(){
+        if(estado == true && temperatura < 85){
             temperatura++;
-            return true;
-        }else{
-            return false;
         }
     }
         
-    public boolean diminuiTemperatura(){
-        if(estado == true){
+    public void diminuiTemperatura(){
+        if(estado == true && temperatura > 80){
             temperatura--;
-            return true;
-        }else{
-            return false;
         }
     }
     
